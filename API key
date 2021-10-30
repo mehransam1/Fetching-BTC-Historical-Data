@@ -1,0 +1,14 @@
+from binance.client import Client
+from binance.enums import *
+from binance.exceptions import BinanceAPIException, BinanceOrderException
+from decimal import Decimal
+import numpy as np
+from statistics import mean
+from time import sleep
+from datetime import datetime
+import requests
+
+api_key="<your account API key provided by Binance>"
+api_secret="<your account API secret key provided by Binance>"
+
+client = Client(api_key, api_secret)
