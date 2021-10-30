@@ -1,0 +1,21 @@
+#you can get historical data on some crypte in which time frame you want in spot and futures platform in binance with codes boelow#
+
+#spot:
+
+kline=client.get_historical_klines(<symbol>, <timeframe>, <from when to now>)
+
+#futures:
+
+kline=client.futures_historical_klines(<symbol>, <timeframe>, <from when to now>)
+
+#in symbol argument you can use for example "BTCUSDT" or other crypto currencies that available on binance.
+
+#in timeframe argument you can use for example Client.KLINE_INTERVAL_5MINUTE or other timeframes by changing the last part of argument.
+
+#in from when to now argument you can use for example "6 hour ago UTC" or which time you want.
+
+#FOR EXAMPLE:
+
+kline=client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_5MINUTE, "6 hour ago UTC")
+
+#Will get you a list of lists containing the BTC data such az Time of candles, OHLC of candles, Vol and....  in 5minute timeframe from 6 hours ago to now on spot platform.
